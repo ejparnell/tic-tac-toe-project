@@ -1,5 +1,9 @@
 let player = 1
+const board = ['', '', '', '', '', '', '', '', '']
 
+const createBoard = function (item, index) {
+  board[index] = item
+}
 const addXOrO = function () {
   if (player === 1) {
     player = 0
@@ -18,5 +22,6 @@ const onClickSuccess = function (box) {
 
 module.exports = {
   onClickSuccess,
-  removeClass
+  removeClass,
+  createBoard
 }
