@@ -9,11 +9,14 @@ const addXOrO = function () {
     return 'o'
   }
 }
-
+const removeClass = function (box) {
+  $(box).removeClass()
+}
 const onClickSuccess = function (box) {
   $(box).text(addXOrO)
 }
 
 module.exports = {
-  onClickSuccess
+  onClickSuccess,
+  removeClass
 }
