@@ -1,7 +1,6 @@
 const ui = require('./ui.js')
 const api = require('../user/api.js')
 const gameOver = require('./ui.js')
-const gameUi = require('../user/ui.js')
 // The game board
 const oneBox = function () {
   console.log('clicked oneBox')
@@ -9,7 +8,6 @@ const oneBox = function () {
   const item = $('.messageOne').text()
   ui.createBoard(item, 0)
   api.updateBoard(0, item, gameOver)
-    .then(gameUi.onSuccess)
   ui.removeClass('.messageOne', '#oneBox')
 }
 const twoBox = function () {
