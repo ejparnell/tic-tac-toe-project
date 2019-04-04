@@ -1,3 +1,4 @@
+
 let player = 1
 const board = ['', '', '', '', '', '', '', '', '']
 let winner = ''
@@ -125,10 +126,10 @@ const addXOrO = function (item) {
     return 'o'
   }
 }
-const removeClass = function (box) {
-  // $(box).removeClass().addClass('invalid')
-  // console.log('got here')
-  // if ($(box).)
+const removeClass = function (box, boxId) {
+  $(box).removeClass()
+  $(boxId).addClass('invalid')
+  console.log('got here')
 }
 const onClickSuccess = function (box) {
   $(box).text(addXOrO)
@@ -144,5 +145,6 @@ const playerMessage = function () {
 module.exports = {
   onClickSuccess,
   createBoard,
-  removeClass
+  removeClass,
+  gameOver
 }
