@@ -1,38 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Tic Tac Toe</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<head>
+  <title>Tic Tac Toe</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-    </head>
-    <body>
-      <h1>Tic Tac Toe Game</h1>
-      <h3 class="player-update">Player is X</h3>
-      <h3 class="game-update">Game update</h3>
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 
-      <section id="game-board" class="container">
-        <div class="row">
-          <div id="oneBox" class="col-3"><span class="messageOne">box 1</span></div>
-          <div id="twoBox" class="col-3"><span class="messageTwo">box 2</span></div>
-          <div id="threeBox" class="col-3"><span class="messageThree">box 3</span></div>
-        </div>
-        <div class="row">
-          <div id="fourBox" class="col-3"><span class="messageFour">box 4</span></div>
-          <div id="fiveBox" class="col-3"><span class="messageFive">box 5</span></div>
-          <div id="sixBox" class="col-3"><span class="messageSix">box 6</span></div>
-        </div>
-        <div class="row">
-          <div id="sevenBox" class="col-3"><span class="messageSeven">box 7</span></div>
-          <div id="eightBox" class="col-3"><span class="messageEight">box 8</span></div>
-          <div id="nineBox" class="col-3"><span class="messageNine">box 9</span></div>
-        </div>
-      </section>
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
 
-    </body>
+<body>
+  <h1>Tic Tac Toe Game</h1>
+
+  <form id="sign-up">
+    <input required type="email" name="credentials[email]" placeholder="email" />
+    <input required type="password" name="credentials[password]" placeholder="password" />
+    <input required type="password" name="credentials[password_confirmation]" placeholder="password confirmation" />
+    <input type="submit" value="Sign Up" />
+  </form>
+
+  <form id="sign-in">
+    <input required type="email" name="credentials[email]" placeholder="email" />
+    <input required type="password" name="credentials[password]" placeholder="password" />
+    <input type="submit" value="Sign In" />
+  </form>
+
+  <form id="change-password">
+    <input required type="password" name="passwords[old]" placeholder="Old Password" />
+    <input required type="password" name="passwords[new]" placeholder="New Password" />
+    <input type="submit" value="Change Password" />
+  </form>
+
+  <form id="sign-out">
+    <input type="submit" value="Sign out" />
+  </form>
+
+  <h3 class="player-update">Player is X</h3>
+  <h3 class="game-update">Game update</h3>
+
+  <section id="game-board" class="container">
+    <div class="row">
+      <div id="oneBox" class="col-3"><span class="messageOne">box 1</span></div>
+      <div id="twoBox" class="col-3"><span class="messageTwo">box 2</span></div>
+      <div id="threeBox" class="col-3"><span class="messageThree">box 3</span></div>
+    </div>
+    <div class="row">
+      <div id="fourBox" class="col-3"><span class="messageFour">box 4</span></div>
+      <div id="fiveBox" class="col-3"><span class="messageFive">box 5</span></div>
+      <div id="sixBox" class="col-3"><span class="messageSix">box 6</span></div>
+    </div>
+    <div class="row">
+      <div id="sevenBox" class="col-3"><span class="messageSeven">box 7</span></div>
+      <div id="eightBox" class="col-3"><span class="messageEight">box 8</span></div>
+      <div id="nineBox" class="col-3"><span class="messageNine">box 9</span></div>
+    </div>
+  </section>
+
+</body>
+
 </html>

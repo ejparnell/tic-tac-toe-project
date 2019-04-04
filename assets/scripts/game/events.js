@@ -2,8 +2,8 @@ const ui = require('./ui.js')
 // The game board
 const oneBox = function () {
   console.log('clicked oneBox')
+  ui.onClickSuccess('.messageOne')
   const item = $('.messageOne').text()
-  ui.onClickSuccess('.messageOne', item)
   ui.createBoard(item, 0)
   ui.removeClass('.messageOne')
 }
@@ -64,7 +64,6 @@ const nineBox = function () {
   ui.removeClass('.messageNine')
 }
 // The game updates
-
 const gameHandlers = function () {
   $('#oneBox').on('click', oneBox)
   $('#twoBox').on('click', twoBox)
