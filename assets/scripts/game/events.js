@@ -1,13 +1,13 @@
 const ui = require('./ui.js')
-const api = require('../user/api.js')
-const gameOver = require('./ui.js')
+// const api = require('../user/api.js')
+// const gameOver = require('./ui.js')
 // The game board
 const oneBox = function () {
   console.log('clicked oneBox')
   ui.onClickSuccess('.messageOne')
   const item = $('.messageOne').text()
   ui.createBoard(item, 0)
-  api.updateBoard(0, item, gameOver)
+  // api.updateBoard(0, item, gameOver)
   ui.removeClass('.messageOne', '#oneBox')
 }
 const twoBox = function () {
@@ -15,7 +15,7 @@ const twoBox = function () {
   ui.onClickSuccess('.messageTwo')
   const item = $('.messageTwo').text()
   ui.createBoard(item, 1)
-  api.updateBoard(1, item, gameOver)
+  // api.updateBoard(1, item, gameOver)
   ui.removeClass('.messageTwo')
 }
 const threeBox = function () {
@@ -23,7 +23,7 @@ const threeBox = function () {
   ui.onClickSuccess('.messageThree')
   const item = $('.messageThree').text()
   ui.createBoard(item, 2)
-  api.updateBoard(2, item, gameOver)
+  // api.updateBoard(2, item, gameOver)
   ui.removeClass('.messageThree')
 }
 const fourBox = function () {
@@ -31,7 +31,7 @@ const fourBox = function () {
   ui.onClickSuccess('.messageFour')
   const item = $('.messageFour').text()
   ui.createBoard(item, 3)
-  api.updateBoard(3, item, gameOver)
+  // api.updateBoard(3, item, gameOver)
   ui.removeClass('.messageFour')
 }
 const fiveBox = function () {
@@ -39,7 +39,7 @@ const fiveBox = function () {
   ui.onClickSuccess('.messageFive')
   const item = $('.messageFive').text()
   ui.createBoard(item, 4)
-  api.updateBoard(4, item, gameOver)
+  // api.updateBoard(4, item, gameOver)
   ui.removeClass('.messageFive')
 }
 const sixBox = function () {
@@ -47,7 +47,7 @@ const sixBox = function () {
   ui.onClickSuccess('.messageSix')
   const item = $('.messageSix').text()
   ui.createBoard(item, 5)
-  api.updateBoard(5, item, gameOver)
+  // api.updateBoard(5, item, gameOver)
   ui.removeClass('.messageSix')
 }
 const sevenBox = function () {
@@ -55,7 +55,7 @@ const sevenBox = function () {
   ui.onClickSuccess('.messageSeven')
   const item = $('.messageSeven').text()
   ui.createBoard(item, 6)
-  api.updateBoard(6, item, gameOver)
+  // api.updateBoard(6, item, gameOver)
   ui.removeClass('.messageSeven')
 }
 const eightBox = function () {
@@ -63,7 +63,7 @@ const eightBox = function () {
   ui.onClickSuccess('.messageEight')
   const item = $('.messageEight').text()
   ui.createBoard(item, 7)
-  api.updateBoard(7, item, gameOver)
+  // api.updateBoard(7, item, gameOver)
   ui.removeClass('.messageEight')
 }
 const nineBox = function () {
@@ -71,7 +71,7 @@ const nineBox = function () {
   ui.onClickSuccess('.messageNine')
   const item = $('.messageNine').text()
   ui.createBoard(item, 8)
-  api.updateBoard(8, item, gameOver)
+  // api.updateBoard(8, item, gameOver)
   ui.removeClass('.messageNine')
 }
 // The game updates
@@ -90,6 +90,10 @@ const gameHandlers = function () {
   $('#eightBox').on('click', eightBox)
   $('#nineBox').on('click', nineBox)
   $('body').on('click', '.invalid', invalidMessage)
+  $('#pop-up').show()
+  $('#game-board').hide()
+  $('.player-update').hide()
+  $('.game-update').hide()
 }
 
 module.exports = {

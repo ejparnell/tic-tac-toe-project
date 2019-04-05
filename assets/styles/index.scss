@@ -1,1 +1,50 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+h1 {
+  font-family: 'Bungee Shade', cursive;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.box-one {
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.box-two {
+  border-bottom: 1px solid black;
+}
+
+.box-three {
+  border-right: 1px solid black;
+}
+
+.col-4 {
+  height: 9rem;
+}
+
+.or {
+  text-align: center;
+}
+
+.welcome-message {
+  font-size: 2rem;
+}
+
+.modal-title {
+  text-align: center;
+}
+
+.page-mask {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.pop-up {
+  display: flex;
+}

@@ -7,7 +7,7 @@
 
   <!-- Do not add `link` tags-->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-
+  <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
@@ -15,54 +15,104 @@
 
 <body>
   <h1>Tic Tac Toe Game</h1>
+  <!--Sign in model-->
+  <div class="page-mask"></div>
+  <div id="pop-up" class="modal pop-up" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="welcome-message">Welcome!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
 
-  <form id="sign-up">
-    <input required type="email" name="credentials[email]" placeholder="email" />
-    <input required type="password" name="credentials[password]" placeholder="password" />
-    <input required type="password" name="credentials[password_confirmation]" placeholder="password confirmation" />
-    <input type="submit" value="Sign Up" />
-  </form>
+          <!--Sign in-->
+          <form id="sign-in">
+            <h2>Sign In</h2>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input name="credentials[email]" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">Do not use real emails or passwords!</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input name="credentials[password]" type="password" class="form-control" placeholder="Password">
+            </div>
+            <input type="submit" value="Sign In" class="btn btn-primary" />
+          </form>
 
-  <form id="sign-in">
-    <input required type="email" name="credentials[email]" placeholder="email" />
-    <input required type="password" name="credentials[password]" placeholder="password" />
-    <input type="submit" value="Sign In" />
-  </form>
+          <h3 class="or">-Or-</h3>
+          <!--Sign up-->
+          <form id="sign-up">
+            <h2>Sign Up</h2>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email address</label>
+              <input name="credentials[email]" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+              <small id="emailHelp" class="form-text text-muted">Do not use real emails or passwords!</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input name="credentials[password]" type="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input name="credentials[password_confirmation]" type="password" class="form-control" placeholder="Password">
+            </div>
+            <input type="submit" value="Sign Up" class="btn btn-primary" />
+          </form>
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <form id="change-password">
-    <input required type="password" name="passwords[old]" placeholder="Old Password" />
-    <input required type="password" name="passwords[new]" placeholder="New Password" />
-    <input type="submit" value="Change Password" />
-  </form>
 
-  <form id="sign-out">
-    <input type="submit" value="Sign out" />
+<p>
+    <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+      Change Password
+    </button>
+  </p>
+  <div class="collapse" id="collapseExample">
+    <div class="card card-body">
+      <form id="change-password">
+        <input required type="password" name="passwords[old]" placeholder="Old Password" />
+        <input required type="password" name="passwords[new]" placeholder="New Password" />
+        <input id="btn-cp"class="btn btn-outline-primary" type="submit" value="Change Password" />
+        <p id="cp-success"></p>
+      </form>
+    </div>
+  </div>
+
+ <form id="sign-out">
+    <input type="submit" class="btn btn-outline-primary" value="Sign out" />
   </form>
 
   <h3 class="player-update">Player is X</h3>
   <h3 class="game-update">Game update</h3>
-  <input id="new-game" type="button" value="New game"/>
-  <input id="get-games" type="button" value="Get games"/>
+  <input id="new-game" type="button" value="New game" class="btn btn-primary" />
+  <input id="get-games" type="button" value="Get games" class="btn btn-primary"/>
   <h3 id="games"></h3>
 
-  <section id="game-board" class="container">
-    <div class="row">
-      <div id="oneBox" class="col-3"><span class="messageOne">box 1</span></div>
-      <div id="twoBox" class="col-3"><span class="messageTwo">box 2</span></div>
-      <div id="threeBox" class="col-3"><span class="messageThree">box 3</span></div>
+  <section id="game-board" class="container-fluid">
+    <div class="row justify-content-between">
+      <div id="oneBox" class="col-4 d-flex justify-content-center align-items-center box-one"><span class="messageOne"></span></div>
+      <div id="twoBox" class="col-4 d-flex justify-content-center align-items-center box-one"><span class="messageTwo"></span></div>
+      <div id="threeBox" class="col-4 d-flex justify-content-center align-items-center box-two"><span class="messageThree"></span></div>
     </div>
-    <div class="row">
-      <div id="fourBox" class="col-3"><span class="messageFour">box 4</span></div>
-      <div id="fiveBox" class="col-3"><span class="messageFive">box 5</span></div>
-      <div id="sixBox" class="col-3"><span class="messageSix">box 6</span></div>
+    <div class="row justify-content-between">
+      <div id="fourBox" class="col-4 d-flex justify-content-center align-items-center box-one"><span class="messageFour"></span></div>
+      <div id="fiveBox" class="col-4 d-flex justify-content-center align-items-center box-one"><span class="messageFive"></span></div>
+      <div id="sixBox" class="col-4 d-flex justify-content-center align-items-center box-two"><span class="messageSix"></span></div>
     </div>
-    <div class="row">
-      <div id="sevenBox" class="col-3"><span class="messageSeven">box 7</span></div>
-      <div id="eightBox" class="col-3"><span class="messageEight">box 8</span></div>
-      <div id="nineBox" class="col-3"><span class="messageNine">box 9</span></div>
+    <div class="row justify-content-between">
+      <div id="sevenBox" class="col-4 d-flex justify-content-center align-items-center box-three"><span class="messageSeven"></span></div>
+      <div id="eightBox" class="col-4 d-flex justify-content-center align-items-center box-three"><span class="messageEight"></span></div>
+      <div id="nineBox" class="col-4 d-flex justify-content-center align-items-center box-three"><span class="messageNine"></span></div>
     </div>
   </section>
-
 </body>
 
 </html>

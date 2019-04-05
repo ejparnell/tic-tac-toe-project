@@ -11,7 +11,8 @@ const createBoard = function () {
     data: {}
   })
 }
-const updateBoard = function (cell, index, gamestatus) {
+const updateBoard = function (value, index, bool) {
+  console.log(value, index, bool)
   return $.ajax({
     url: config.apiUrl + `/games/${store.game.id}`,
     method: 'PATCH',
@@ -22,9 +23,9 @@ const updateBoard = function (cell, index, gamestatus) {
       game: {
         cell: {
           index: index,
-          cell: cell
+          value: value
         },
-        over: false
+        over: bool
       }
     }
   })
