@@ -1,9 +1,10 @@
 const api = require('./api.js')
 const ui = require('./ui.js')
+const gameUi = require('../game/ui.js')
 
 const newGameBoard = function (event) {
   api.createBoard()
-    .then(ui.onSuccess)
+    .then(gameUi.onSuccess)
     .catch(ui.onFailure)
 }
 const getGames = function () {

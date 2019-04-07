@@ -8,12 +8,21 @@
   <!-- Do not add `link` tags-->
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
   <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" crossorigin="anonymous">
   <!-- Do not add `script` tags-->
   <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
   <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
 </head>
 
 <body>
+  <header>
+<!--    <nav class="dropdown">
+      <div class="dropbtn"><i class="fas fa-bars fa-3x"></i></div>
+      <div class="myDropdown" class="dropdown-content">
+        <button class="cp-pop-up">Change Password</button>
+      </div>
+    </nav> -->
+  </header>
   <h1>Tic Tac Toe Game</h1>
   <!--Sign in model-->
   <div class="page-mask"></div>
@@ -69,25 +78,14 @@
     </div>
   </div>
 
-
-<p>
-    <button class="btn btn-outline-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-      Change Password
-    </button>
-  </p>
-  <div class="collapse" id="collapseExample">
-    <div class="card card-body">
       <form id="change-password">
         <input required type="password" name="passwords[old]" placeholder="Old Password" />
         <input required type="password" name="passwords[new]" placeholder="New Password" />
-        <input id="btn-cp"class="btn btn-outline-primary" type="submit" value="Change Password" />
-        <p id="cp-success"></p>
+        <input type="submit" value="Change Password" />
       </form>
-    </div>
-  </div>
 
  <form id="sign-out">
-    <input type="submit" class="btn btn-outline-primary" value="Sign out" />
+    <input type="submit" value="Sign out" />
   </form>
 
   <h3 class="player-update">Player is X</h3>
@@ -98,19 +96,19 @@
 
   <section id="game-board" class="container-fluid">
     <div class="row justify-content-between">
-      <div id="oneBox" class="col-4 d-flex justify-content-center align-items-center box-one"><span class="messageOne"></span></div>
-      <div id="twoBox" class="col-4 d-flex justify-content-center align-items-center box-one"><span class="messageTwo"></span></div>
-      <div id="threeBox" class="col-4 d-flex justify-content-center align-items-center box-two"><span class="messageThree"></span></div>
+      <div id="oneBox" data-id="0" class="col-4 d-flex justify-content-center align-items-center box-one"></div>
+      <div id="twoBox" data-id="1" class="col-4 d-flex justify-content-center align-items-center box-one"></div>
+      <div id="threeBox" data-id="2" class="col-4 d-flex justify-content-center align-items-center box-two"></div>
     </div>
     <div class="row justify-content-between">
-      <div id="fourBox" class="col-4 d-flex justify-content-center align-items-center box-one"><span class="messageFour"></span></div>
-      <div id="fiveBox" class="col-4 d-flex justify-content-center align-items-center box-one"><span class="messageFive"></span></div>
-      <div id="sixBox" class="col-4 d-flex justify-content-center align-items-center box-two"><span class="messageSix"></span></div>
+      <div id="fourBox" data-id="3" class="col-4 d-flex justify-content-center align-items-center box-one"></div>
+      <div id="fiveBox" data-id="4" class="col-4 d-flex justify-content-center align-items-center box-one"></div>
+      <div id="sixBox" data-id="5" class="col-4 d-flex justify-content-center align-items-center box-two"></div>
     </div>
     <div class="row justify-content-between">
-      <div id="sevenBox" class="col-4 d-flex justify-content-center align-items-center box-three"><span class="messageSeven"></span></div>
-      <div id="eightBox" class="col-4 d-flex justify-content-center align-items-center box-three"><span class="messageEight"></span></div>
-      <div id="nineBox" class="col-4 d-flex justify-content-center align-items-center box-three"><span class="messageNine"></span></div>
+      <div id="sevenBox" data-id="6" class="col-4 d-flex justify-content-center align-items-center box-three"></div>
+      <div id="eightBox" data-id="7" class="col-4 d-flex justify-content-center align-items-center box-three"></div>
+      <div id="nineBox" data-id="8" class="col-4 d-flex justify-content-center align-items-center box-three"></div>
     </div>
   </section>
 </body>
