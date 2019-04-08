@@ -9,6 +9,7 @@ const signUpSuccess = function (data) {
 const signUpFailure = function (data) {
   $('.welcome-message').text('Sign up Failure. Please try again.')
   $('.sign-up').removeClass('btn-outline-info').addClass('btn-outline-danger')
+  $('form').trigger('reset')
 }
 const signInSuccess = function (data) {
   $('form').trigger('reset')
@@ -21,6 +22,7 @@ const signInSuccess = function (data) {
 const signInFailure = function (data) {
   $('.welcome-message').text('Invalid password or email')
   $('.sign-in').removeClass('btn-outline-info').addClass('btn-outline-danger')
+  $('form').trigger('reset')
 }
 const changePasswordSuccess = function (data) {
   $('form').trigger('reset')
@@ -28,6 +30,7 @@ const changePasswordSuccess = function (data) {
 }
 const changePasswordFailure = function (data) {
   $('.game-update').text('Change Password has failed. Please try again.')
+  $('form').trigger('reset')
 }
 const signOutSuccess = function () {
   $('.welcome-message').text(`${store.user.email} has Sign Out. Please Sign In.`)
