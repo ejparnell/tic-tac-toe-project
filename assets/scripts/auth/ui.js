@@ -8,6 +8,7 @@ const signUpSuccess = function (data) {
 }
 const signUpFailure = function (data) {
   $('.welcome-message').text('Sign up Failure. Please try again.')
+  $('.sign-up').removeClass('btn-outline-info').addClass('btn-outline-danger')
 }
 const signInSuccess = function (data) {
   $('form').trigger('reset')
@@ -19,6 +20,7 @@ const signInSuccess = function (data) {
 }
 const signInFailure = function (data) {
   $('.welcome-message').text('Invalid password or email')
+  $('.sign-in').removeClass('btn-outline-info').addClass('btn-outline-danger')
 }
 const changePasswordSuccess = function (data) {
   $('form').trigger('reset')
