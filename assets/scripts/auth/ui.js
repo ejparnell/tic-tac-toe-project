@@ -7,7 +7,7 @@ const signUpSuccess = function (data) {
   $('.or').hide()
 }
 const signUpFailure = function (data) {
-  $('.game-update').text('Sign up Failure. Please try again.')
+  $('.welcome-message').text('Sign up Failure. Please try again.')
 }
 const signInSuccess = function (data) {
   $('form').trigger('reset')
@@ -18,7 +18,7 @@ const signInSuccess = function (data) {
   $('.game-update').text(`Welcome ${store.user.email}`).show()
 }
 const signInFailure = function (data) {
-  $('.game-update').text('Invalid password or email')
+  $('.welcome-message').text('Invalid password or email')
 }
 const changePasswordSuccess = function (data) {
   $('form').trigger('reset')
