@@ -44,9 +44,25 @@
             </div>
             <input type="submit" value="Sign In" class="btn btn-outline-info sign-in" />
           </form>
+          <button type="button" class="btn btn-outline-info sign-up-toggle">Sign Up</button>
 
-          <h3 class="or">-Or-</h3>
           <!--Sign up-->
+        </div>
+        <div class="modal-footer">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal sign-up-modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Sign Up</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
           <form id="sign-up">
             <h2>Sign Up</h2>
             <div class="form-group">
@@ -63,9 +79,8 @@
               <input name="credentials[password_confirmation]" type="password" class="form-control" placeholder="Password">
             </div>
             <input type="submit" value="Sign Up" class="btn btn-outline-info sign-up" />
+            <button type="button" class="btn btn-outline-info sign-in-toggle">Sign In</button>
           </form>
-        </div>
-        <div class="modal-footer">
         </div>
       </div>
     </div>

@@ -5,6 +5,8 @@ const signUpSuccess = function (data) {
   $('.welcome-message').text('Sign up Success! Sign In.')
   $('#sign-up').hide(500)
   $('.or').hide()
+  $('.pop-up').show()
+  $('.sign-up-modal').hide()
 }
 const signUpFailure = function (data) {
   $('.welcome-message').text('Sign up Failure. Please try again.')

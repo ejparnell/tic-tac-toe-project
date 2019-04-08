@@ -29,13 +29,23 @@ const onSignOut = function (event) {
     .then(ui.signOutSuccess)
     .catch(ui.signOutFailure)
 }
-
+const signUpToggle = function () {
+  $('.pop-up').hide()
+  $('.sign-up-modal').show()
+}
+const signInToggle = function () {
+  $('.sign-up-modal').hide()
+  $('.pop-up').show()
+}
 const authHandlers = function () {
   $('#sign-up').on('submit', onSignUp)
   $('#sign-in').on('submit', onSignIn)
   $('#change-password').on('submit', onChangePassword)
   $('#sign-out').on('submit', onSignOut)
   $('sign-in-success').hide()
+  $('.sign-up-modal').hide()
+  $('.sign-up-toggle').on('click', signUpToggle)
+  $('.sign-in-toggle').on('click', signInToggle)
 }
 module.exports = {
   authHandlers
