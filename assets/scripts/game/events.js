@@ -2,7 +2,7 @@ const ui = require('./ui.js')
 
 // The game updates
 const invalidMessage = function () {
-  $('.game-update').text('Pick another')
+  $('.game-update').text('Pick another').show().hide(2000)
 }
 
 const clickGame = function () {

@@ -1,6 +1,6 @@
 const { isWinningIndex } = require('../game/utils.js')
 const onFailure = function () {
-  console.log('You failed bro!')
+  $('.game-update').text('Please try again.')
 }
 
 const convertCellsToPlayers = function (cells) {
@@ -24,8 +24,8 @@ const onGetGameSuccess = function (response) {
     .filter(i => i.length > 0 && isWinningIndex(i)).length
 
   $('.game-update').append(`
-    <p>I'v played ${count} number of games!</p>
-    <p>I've won ${winningGames}</p>
+    <p>You've played ${count} number of games!</p>
+    <p>You've won ${winningGames}</p>
     <br>
     `)
 }

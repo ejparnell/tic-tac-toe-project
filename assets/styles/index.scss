@@ -1,26 +1,70 @@
 @import '~bootstrap/scss/bootstrap';
 
-.fa-bars {
+$background-color: #f5eedb;
+$header-color: #eb9384;
+$border-color: #927682;
+$text-color: #2d4149;
 
+
+h3 {
+  font-family: 'Cabin Sketch', cursive;
+}
+
+.player-update {
+  text-align: center;
+  margin: 1rem 0;
+  color: $text-color;
+}
+
+.get-games {
+  float: right;
+}
+
+.game-update {
+  text-align: center;
+  margin: 1rem 0;
+  color: $text-color;
+  font-family: 'Cabin Sketch', cursive;
+}
+
+body {
+  margin: 1rem;
+  background-color: $background-color;
+}
+
+.change-password-btn {
+  display: inline;
+  float: right;
+}
+
+.user-card {
+  width: 100%;
 }
 
 h1 {
   font-family: 'Bungee Shade', cursive;
-  font-size: 2rem;
+  font-size: 3rem;
   text-align: center;
+  color: $header-color;
 }
 
 .box-one {
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
+  border-right: 3px solid $border-color;
+  border-bottom: 3px solid $border-color;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 2rem;
 }
 
 .box-two {
-  border-bottom: 1px solid black;
+  border-bottom: 3px solid $border-color;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 2rem;
 }
 
 .box-three {
-  border-right: 1px solid black;
+  border-right: 3px solid $border-color;
+  font-family: 'Cabin Sketch', cursive;
+  font-size: 2rem;
 }
 
 .col-4 {

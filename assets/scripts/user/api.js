@@ -12,7 +12,6 @@ const createBoard = function () {
   })
 }
 const updateBoard = function (value, index, bool) {
-  console.log(value, index, bool)
   return $.ajax({
     url: config.apiUrl + `/games/${store.game.id}`,
     method: 'PATCH',

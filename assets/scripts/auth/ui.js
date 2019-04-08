@@ -1,40 +1,40 @@
 const store = require('../store')
 
 const signUpSuccess = function (data) {
-  $('form').trigger('reset') // resets when action triggers
-  $('#pop-up').hide()
-  $('.page-mask').hide()
+  $('form').trigger('reset')
+  $('.welcome-message').text('Sign up Success! Sign In.')
+  $('#sign-up').hide(500)
+  $('.or').hide()
 }
 const signUpFailure = function (data) {
-  console.log(`sign up failure ran:`, data)
+  $('.game-update').text('Sign up Failure. Please try again.')
 }
 const signInSuccess = function (data) {
-  console.log(`sign in success ran:`, data)
   $('form').trigger('reset')
   store.user = data.user
   $('#pop-up').hide()
   $('.page-mask').hide()
+  $('.sign-in-success').show()
+  $('.game-update').text(`Welcome ${store.user.email}`).show()
 }
 const signInFailure = function (data) {
-  console.log(`sign in failure ran:`, data)
+  $('.game-update').text('Invalid password or email')
 }
 const changePasswordSuccess = function (data) {
-  console.log(`change password success ran:`, data)
   $('form').trigger('reset')
-  $('#btn-cp').removeClass('btn-outline-primary').addClass('btn-outline-success')
-  $('#cp-success').text('Your Password has been changed')
+  $('.game-update').text(`${store.user.email} has changed password`)
 }
 const changePasswordFailure = function (data) {
-  console.log(`change password failure ran:`, data)
+  $('.game-update').text('Change Password has failed. Please try again.')
 }
 const signOutSuccess = function () {
-  console.log('sign out works')
+  $('.welcome-message').text(`${store.user.email} has Sign Out. Please Sign In.`)
   store.user = null
   $('#pop-up').show()
   $('.page-mask').show()
 }
 const signOutFailure = function () {
-  console.log('sign out fails')
+  $('.game-update').text('Sign out Failed. Please try again.')
 }
 
 module.exports = {

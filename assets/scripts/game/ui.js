@@ -46,6 +46,8 @@ const addXOrO = function (item) {
 const onClickSuccess = function (box, index) {
   if ($(box).text() !== 'x' && $(box).text() !== 'o') {
     $(box).text(addXOrO)
+  } else if ($(box).text() === 'x' || $(box).text() === 'o') {
+    $(box).addClass('invalid')
   }
   if ($(box).text() === 'x') {
     createBoard('x', index)
@@ -87,6 +89,7 @@ const onSuccess = function (data) {
   $('#nineBox').empty()
   $('#game-board').show()
   $('.player-update').show()
+  $('.game-update').hide()
 }
 
 //
