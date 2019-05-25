@@ -17,16 +17,13 @@
 
 <body>
   <h1>Tic Tac Toe Game</h1>
-  <!--Sign in model-->
+  <!--Sign in and sign up model-->
   <div class="page-mask"></div>
   <div id="pop-up" class="modal pop-up" tabindex="-1" role="dialog">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="welcome-message">Welcome to Tic-Tac-Toe!</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
         </div>
         <div class="modal-body">
 
@@ -42,25 +39,22 @@
               <label for="exampleInputPassword1">Password</label>
               <input name="credentials[password]" type="password" class="form-control" placeholder="Password">
             </div>
-            <input type="submit" value="Sign In" class="btn btn-outline-info sign-in" />
+            <input type="submit" value="Sign In" class="btn btn-primary sign-in" />
           </form>
-          <button type="button" class="btn btn-outline-info sign-up-toggle">Sign Up</button>
-
-          <!--Sign up-->
         </div>
         <div class="modal-footer">
+          <button type="button" class="btn btn-secondary sign-up-toggle">Sign Up</button>
         </div>
       </div>
     </div>
   </div>
+
+  <!--Sign up-->
   <div class="modal sign-up-modal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Sign Up</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
         </div>
         <div class="modal-body">
           <form id="sign-up">
@@ -78,9 +72,11 @@
               <label for="exampleInputPassword1">Password</label>
               <input name="credentials[password_confirmation]" type="password" class="form-control" placeholder="Password">
             </div>
-            <input type="submit" value="Sign Up" class="btn btn-outline-info sign-up" />
-            <button type="button" class="btn btn-outline-info sign-in-toggle">Sign In</button>
+            <input type="submit" value="Sign Up" class="btn btn-primary sign-up" />
           </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary sign-in-toggle">Sign In</button>
         </div>
       </div>
     </div>
@@ -106,7 +102,7 @@
   <form id="sign-out">
     <input class="btn btn-outline-info" type="submit" value="Sign out" />
   </form>
-
+<!--Game messaging and game buttons-->
   <h3 class="player-update">Player is X</h3>
   <h3 class="game-update">Game update</h3>
   <input id="new-game" type="button" value="New game" class="btn btn-outline-info" />
